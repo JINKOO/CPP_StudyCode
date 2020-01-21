@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shape_Virtual_Function", "Shape_Virtual_Function\Shape_Virtual_Function.vcxproj", "{4B0FECF6-5AF0-4247-B801-B20FA72630DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B0FECF6-5AF0-4247-B801-B20FA72630DC}.Debug|x64.ActiveCfg = Debug|x64
+		{4B0FECF6-5AF0-4247-B801-B20FA72630DC}.Debug|x64.Build.0 = Debug|x64
+		{4B0FECF6-5AF0-4247-B801-B20FA72630DC}.Debug|x86.ActiveCfg = Debug|Win32
+		{4B0FECF6-5AF0-4247-B801-B20FA72630DC}.Debug|x86.Build.0 = Debug|Win32
+		{4B0FECF6-5AF0-4247-B801-B20FA72630DC}.Release|x64.ActiveCfg = Release|x64
+		{4B0FECF6-5AF0-4247-B801-B20FA72630DC}.Release|x64.Build.0 = Release|x64
+		{4B0FECF6-5AF0-4247-B801-B20FA72630DC}.Release|x86.ActiveCfg = Release|Win32
+		{4B0FECF6-5AF0-4247-B801-B20FA72630DC}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2FBCF86-B101-4083-89C0-4540DC738E6F}
+	EndGlobalSection
+EndGlobal
