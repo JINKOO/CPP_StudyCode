@@ -1,15 +1,22 @@
-#pragma once
+#ifndef SHAPE_H
+#define SHAPE_H
+#include "point.h"
+
 class Shape
 {
 protected:
-	double x;
-	double y;
+	Point p1;
+	Point p2;
 
 public:
 	Shape();
-	Shape(double x, double y);
-	~Shape();
+	Shape(const Shape& p);
+	Shape(Point p1, Point p2);
+	virtual ~Shape();
 
 public:
-	virtual void draw() const;
+	virtual void draw() const = 0;
+	virtual void calculate_area() const = 0;
 };
+
+#endif
