@@ -3,7 +3,6 @@
 /*
   #. 매개변수가 여러개인 template class사용.
     - TwoArray class = smart ponter class로.
-
 */
 
 template <typename A, typename B, int MAX>
@@ -28,13 +27,9 @@ public:
 
 public:
 
-    template<typename C>
-    C& operator[](int index)
+    A& operator[](int index)
     {
-        this->ptr_a[index];
-        this->ptr_b[index];
-
-        return 
+        return this->ptr_a[index]; 
     }
 
     void printArray()
