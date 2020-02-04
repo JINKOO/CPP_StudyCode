@@ -1,4 +1,5 @@
 #include "list.h"
+#include "student.h"
 #include <iostream>
 
 //List 생성.
@@ -76,7 +77,8 @@ void removeList(List* list, bool deleteData)
 		
 		//3. data들어 있는 첫번째 node부터 제거
 		if (deleteData)
-			delete current->data;
+			//delete연산자에게 해제하고자하는 타입을 알려줘야함.
+			delete (Student*)current->data;
 		delete current;
 
 		current = next;
@@ -93,10 +95,11 @@ void removeList(List* list, bool deleteData)
 
 
 //마지막 node를 구한다.
-//list :: headernode를 가리키는 lisg
+//list :: headernode를 가리키는 node
 //반환값 :: 마지막 node
 Node* getTail(List* list)
 {
+	//circlular 구조이므로 마지막 node는 headNode->prev가 된다.
 	//마지막 노드가 자기 자신일 수 있다.
 	return list->head->prev;
 }

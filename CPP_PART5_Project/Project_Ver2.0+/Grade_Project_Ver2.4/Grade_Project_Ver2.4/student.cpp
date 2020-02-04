@@ -1,35 +1,29 @@
 #include "student.h"
 #include "list.h"
+#include <iostream>
 #include <iomanip>
 
-//const int MAX_STUDENTS = 100;
-//Student students[MAX_STUDENTS];
+struct Student
+{
+	int sNo;			// 학번
+	std::string name;	// 이름
+	int kor, eng, math;	// 국영수 점수
+	float avg;			// 평균
 
-//배열 대신해, 링크드 리스트를 사용하여 학생 구조체 보관.
+	~Student()
+	{
+		std::cout << "~Student() called" << "\n";
+	}
+};
+
+//List 전역 변수
 List* students = NULL;
 
-float total_avg = 0;
 int number_of_student = 0;
-
-
-//링크드 리스트 초기화
-void setUp()
-{
-	students = createList();
-}
-
-//사용한 리소스 정리
-void tearDown()
-{
-	removeList(students, true);
-}
-
+float total_avg = 0.0f;
 
 bool addStudent()
 {
-
-	//Student& student = students[number_of_student];
-	//동적할당으로 대체.
 	Student* student = new Student;
 	student->sNo = number_of_student + 1;
 
@@ -54,8 +48,8 @@ bool addStudent()
 
 	number_of_student++;
 
-	//Linked List에 추가
-	insertNodeAfter(getTail(students), student);
+	//list에 추가
+	insertAfterNode(getTail(students), student);
 
 	return true;
 }
@@ -68,18 +62,38 @@ void showAll()
 	std::cout << "\n           < 전체 성적 보기 >";
 	std::cout << "\n   학번  이름  국어 영어 수학   평균\n";
 
-	//LinkedList를 사용한 출력
 	Node* current = students->head->next;
+
 	while (current != students->head)
 	{
-		const Student* student = static_cast<Student*>(current->data);
+		const Student* student = (Student*)current->data;
 		std::cout << std::setw(7) << student->sNo << std::setw(7) << student->name;
 		std::cout << std::setw(5) << student->kor << std::setw(5) << student->eng;
 		std::cout << std::setw(5) << student->math << std::setw(7) << student->avg << "\n";
-	
 		current = current->next;
 	}
 
 	// 전체 평균을 출력한다.
 	std::cout << "\n전체 평균 = " << total_avg << "\n";
+}
+
+//각 node의 data제거용 함수.
+//linked list가 node안의 void* data를 해제 할때
+//이 함수를 호출하도록 한다.
+void deleteData(void* data)
+{
+	delete (Student*)data;
+}
+
+void setUp()
+{
+	//인자로 data제거용 함수 넘겨줌.
+	//함수 포인터를 사용하므로 해당 함수의 주솟값을 인자로 넘겨준다.
+	//linked list는 이 함수 포인터를 사용하여, 함수의 주소를 보관한다.
+	students = createList(&deleteData);
+}
+
+void tearDown()
+{
+	removeList(students, true);
 }
