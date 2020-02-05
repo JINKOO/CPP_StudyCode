@@ -3,8 +3,9 @@
 #include <iostream>
 
 //Ver2.3의 setUp()에 해당
+//멤버 초기화 리스트를 사용하여, List의 생성자 호출.
 Students::Students()
-	:students(&Students::deleteData)
+	:students(&Students::deleteData)   //멤버 함수의 함수주솟값 넘겨줌.
 {
 	this->total_avg = 0.0f;
 	this->number_of_student = 0;
@@ -62,6 +63,8 @@ void Students::showAll()
 	std::cout << "\n전체 평균 :: " << this->total_avg << "\n";
 }
 
+//Linked List의 data 제거용 함수
+//각 node의 data를 제거할 때 호출한다.
 void Students::deleteData(void* data)
 {
 	delete (Student*)data;

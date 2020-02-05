@@ -1,26 +1,27 @@
 #ifndef STUDENTS_H
 #define STUDENTS_H
 
+//List와 포함관계 이므로
 #include "list.h"
 
-//학생들의 성적정보를 관리하는 class
+//학생들의 정보를 관리하는 class.
+//Linked List를 사용하는 class.
 class Students
 {
 private:
 	List students;
+	int number_of_students;
 	float total_avg;
-	int number_of_student;
 
 public:
 	Students();
 	~Students();
 
 public:
-	bool addStudent();
+	bool addStudent(bool general);
 	void showAll();
 
-	//data제거용 함수를 static으로 선언
-	//일반 멤버 함수로 선언하면, list로 주솟값을 넘겨주지 못함. 
+public:
 	static void deleteData(void* data);
 };
 

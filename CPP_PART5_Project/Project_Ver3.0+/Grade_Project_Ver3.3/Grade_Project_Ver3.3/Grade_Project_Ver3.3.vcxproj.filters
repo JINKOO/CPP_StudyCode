@@ -15,7 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="list.h">
+    <ClCompile Include="grade_main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="student.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="students.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="list.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="elite_student.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="menu.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="student.h">
@@ -24,25 +44,11 @@
     <ClInclude Include="students.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="menu.h">
+    <ClInclude Include="list.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="list.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="students.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="student.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="menu.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grade_main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
+    <ClInclude Include="elite_student.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

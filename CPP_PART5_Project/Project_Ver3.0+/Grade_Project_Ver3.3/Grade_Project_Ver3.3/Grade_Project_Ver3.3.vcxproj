@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{59C7DC40-B152-437F-A25E-D6E520AD4038}</ProjectGuid>
-    <RootNamespace>GradeProjectVer30</RootNamespace>
+    <ProjectGuid>{A6E0FD2B-3165-431C-AE31-B3EB5B4F0CBB}</ProjectGuid>
+    <RootNamespace>GradeProjectVer33</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -138,17 +138,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="list.h" />
-    <ClInclude Include="menu.h" />
-    <ClInclude Include="student.h" />
-    <ClInclude Include="students.h" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="elite_student.cpp" />
     <ClCompile Include="grade_main.cpp" />
     <ClCompile Include="list.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="student.cpp" />
     <ClCompile Include="students.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="elite_student.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="student.h" />
+    <ClInclude Include="students.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

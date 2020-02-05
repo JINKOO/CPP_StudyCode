@@ -1,4 +1,6 @@
-#pragma once
+#ifndef STUDENT_H
+#define STUDENT_H
+
 #include<string>
 
 //학생 1명에 대한 정보를 관리할 class
@@ -27,3 +29,4 @@ public:
 	int getMath() const { return this->math; };
 	float getAvg() const { return this->avg; };
 };
+#endif

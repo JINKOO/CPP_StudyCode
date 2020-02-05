@@ -1,8 +1,10 @@
 #ifndef LIST_H
 #define LIST_H
+
 //node한개의 정보에 대한 class
 class Node
 {
+	//friend로 선언된 class는 Node의 모든멤버에 접근 가능.
 	friend class List;
 
 private:
@@ -20,6 +22,7 @@ public:
 //전체 linked list관리하는 class.
 class List
 {
+
 public:
 	typedef void (*FN_DELETE)(void*);
 
