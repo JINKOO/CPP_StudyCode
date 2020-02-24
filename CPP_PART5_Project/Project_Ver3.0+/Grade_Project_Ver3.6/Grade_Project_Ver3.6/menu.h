@@ -1,0 +1,13 @@
+#pragma once
+
+enum class MENU
+{
+	ADD_GENERAL_STUDENT,
+	ADD_ELITE_STUDENT,
+	SHOW_ALL,
+	SHOW_AS_TEXTFILE,
+	SHOW_AS_HTMLFILE,
+	QUIT_PROGRAM
+};
+
+MENU showMenu();

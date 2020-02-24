@@ -1,0 +1,16 @@
+#ifndef MENU_H
+#define MENU_H
+
+enum class MENU
+{
+	ADD_GENERAL_STUDENT,
+	ADD_ELITE_STUDENT,
+	SHOW_ALL,
+	MENU_SAVE_TEXT, 
+	MENU_SAVE_HTML, 
+	QUIT_PROGRAM
+};
+
+MENU showMenu();
+
+#endif
