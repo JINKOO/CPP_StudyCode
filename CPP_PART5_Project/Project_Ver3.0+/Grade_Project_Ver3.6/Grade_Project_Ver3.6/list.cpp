@@ -1,5 +1,6 @@
 #include "list.h"
 #include <iostream>
+#include <exception>
 
 Node::Node()
 {
@@ -37,6 +38,9 @@ List::~List()
 //Circular LinkedList에 삽입
 void List::insertAfterNode(Node* node, void* data)
 {
+	if (node == NULL)
+		throw std::invalid_argument("알 수 없는 오류가 있습니다.(337)");
+
 	Node* before = node;
 	Node* after = node->next;
 

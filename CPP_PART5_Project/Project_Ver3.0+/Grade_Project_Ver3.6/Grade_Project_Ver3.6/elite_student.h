@@ -14,7 +14,7 @@ public:
 
 public:
 	virtual void setStdInfo();
-	virtual void showStdInfo() const;
+	virtual void showStdInfo(BaseOutput& out) const;
 
 	int getAdvancedEng() const { return this->advanced_eng; }
 };

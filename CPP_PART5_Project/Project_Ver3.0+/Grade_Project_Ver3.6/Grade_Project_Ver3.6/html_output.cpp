@@ -1,9 +1,15 @@
 #include "html_output.h"
+#include "my_exception.h"
+#include <iostream>
 
 HTMLOutput::HTMLOutput(STR fileName)
 {
 	this->columns = 0;
 	this->fout.open(fileName.c_str());
+
+	if (fout.is_open() == false)
+		throw MyException(fileName + "을 열 수 없습니다.");
+
 
 	fout << "<HTML><HEAD><TITLE> IT 백두대간";
 	fout << "C++ Project</TITLE></HEAD><BODY><CENTER>";
@@ -12,6 +18,7 @@ HTMLOutput::HTMLOutput(STR fileName)
 HTMLOutput::~HTMLOutput()
 {
 	fout << "</CENTER><BODY></HTML>";
+	std::cout << "~HTMLOutput called()" << "\n";
 	fout.close();
 }
 

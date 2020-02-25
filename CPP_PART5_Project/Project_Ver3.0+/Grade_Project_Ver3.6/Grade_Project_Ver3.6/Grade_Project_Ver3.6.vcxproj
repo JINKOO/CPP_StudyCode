@@ -155,6 +155,7 @@
     <ClInclude Include="html_output.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="my_exception.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="students.h" />
     <ClInclude Include="textfile_output.h" />
